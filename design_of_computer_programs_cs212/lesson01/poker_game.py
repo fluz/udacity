@@ -28,6 +28,13 @@ def hand_rank(hand):
         return (0, ranks)
 
 
+def card_ranks(cards):
+    """ Return a list of the ranks, sorted with higher first"""
+    ranks = ["--23456789TJQKA".index(r) for r, s in cards]
+    ranks.sort(reverse=True)
+    return ranks
+
+
 def kind(number, hand):
     return None
 
@@ -37,10 +44,6 @@ def two_pair(ranks):
 
 
 def flush(hand):
-    return None
-
-
-def card_ranks(hand):
     return None
 
 
