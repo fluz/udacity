@@ -69,5 +69,13 @@ class TddPokerGame(unittest.TestCase):
 
     def test_two_pair(self):
         """ Test two pairs"""
-        tp = "TD 9H TH 7C 3S".split()
-        tpranks = card_ranks(tp)
+        fk = "9D 9H 9S 9C 7D".split()
+        tp = "TD 9H TH 7C 7S".split()
+        fkranks = poker_game.card_ranks(fk)
+        tpranks = poker_game.card_ranks(tp)
+
+        print fkranks
+        print tpranks
+
+        self.assertEqual(poker_game.two_pair(fkranks), None)
+        self.assertEqual(poker_game.two_pair(tpranks), (10, 7))

@@ -58,4 +58,8 @@ def kind(n, ranks):
 def two_pair(ranks):
     """If there are two pair, return the two ranks as a
        tuple: (highest, lowest); otherwise return None."""
+    pair_highest = kind(2, ranks)
+    pair_lowest = kind(2, list(reversed(ranks)))
+    if pair_highest and pair_highest != pair_lowest:
+        return (pair_highest, pair_lowest)
     return None
