@@ -11,12 +11,13 @@ class TddPokerGame(unittest.TestCase):
     def test_winner(self):
         """ Test the return of the best hand """
         sf = "6C 7C 8C 9C TC".split()
+        sf2 = "6D 7D 8D 9D TD".split()
         fk = "9D 9H 9S 9C 7D".split()
         fh = "TD TC TH 7C 7D".split()
 
-        self.assertEqual(
-            poker_game.poker([fk, sf, fh]), sf)
+        self.assertEqual(poker_game.poker([fk, sf, fh]), sf)
         self.assertEqual(poker_game.poker([fk, fh]), fk)
+        self.assertEqual(poker_game.poker([sf, fk, sf2]), [sf, sf2])
         self.assertEqual(poker_game.poker([fk, fk]), fk)
         self.assertEqual(poker_game.poker([fk]), fk)
         self.assertEqual(poker_game.poker([fk] * 99 + [sf]), sf)
