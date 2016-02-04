@@ -35,17 +35,20 @@ def card_ranks(cards):
     return ranks
 
 
+def straight(ranks):
+    """ Return True if the ordered ranks from a 5 card straight"""
+    return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
+
+
+def flush(hand):
+    """ Return True if all cards have the same suit"""
+    suits = [s for r, s in hand]
+    return len(set(suits)) == 1
+
+
 def kind(number, hand):
     return None
 
 
 def two_pair(ranks):
-    return None
-
-
-def flush(hand):
-    return None
-
-
-def straight(ranks):
     return None

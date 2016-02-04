@@ -41,3 +41,17 @@ class TddPokerGame(unittest.TestCase):
         self.assertEqual(poker_game.card_ranks(sf), [10, 9, 8, 7, 6])
         self.assertEqual(poker_game.card_ranks(fk), [9, 9, 9, 9, 7])
         self.assertEqual(poker_game.card_ranks(fh), [10, 10, 10, 7, 7])
+
+    def test_flush(self):
+        """ Test the flush """
+        sf = "6C 7C 8C 9C TC".split()
+        fk = "9D 9H 9S 9C 7D".split()
+
+        self.assertEqual(poker_game.flush(sf), True)
+        self.assertEqual(poker_game.flush(fk), False)
+
+    def test_straight(self):
+        """ Test the straight """
+
+        self.assertEqual(poker_game.straight([9, 8, 7, 6, 5]), True)
+        self.assertEqual(poker_game.straight([9, 8, 7, 4, 5]), False)
