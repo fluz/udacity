@@ -52,9 +52,11 @@ class TddPokerGame(unittest.TestCase):
 
     def test_straight(self):
         """ Test the straight """
+        al = "AC 2D 4H 3D 5S".split()  # Ace-Low Straight
 
         self.assertEqual(poker_game.straight([9, 8, 7, 6, 5]), True)
         self.assertEqual(poker_game.straight([9, 8, 7, 4, 5]), False)
+        self.assertEqual(poker_game.straight(poker_game.card_ranks(al)), True)
 
     def test_kind(self):
         """ Test the kind """
