@@ -1,8 +1,13 @@
 
 
 def poker(hands):
-    """Return the best hand: poker([hand,...]) => hand"""
-    return max(hands, key=hand_rank)
+    """Return a list of winning hands: poker([hand,...]) => [hand,...]"""
+    return allmax(hands, key=hand_rank)
+
+
+def allmax(iterable, key=None):
+    """Return a list of all items equal to the max of the iterable"""
+    return None
 
 
 def hand_rank(hand):
