@@ -15,8 +15,8 @@ class TddPokerGame(unittest.TestCase):
         fh = "TD TC TH 7C 7D".split()
 
         self.assertEqual(
-            poker_game.poker([fk, sf, fh]), fh)
-        self.assertEqual(poker_game.poker([fk, fh]), fh)
+            poker_game.poker([fk, sf, fh]), sf)
+        self.assertEqual(poker_game.poker([fk, fh]), fk)
         self.assertEqual(poker_game.poker([fk, fk]), fk)
         self.assertEqual(poker_game.poker([fk]), fk)
         self.assertEqual(poker_game.poker([fk] * 99 + [sf]), sf)
