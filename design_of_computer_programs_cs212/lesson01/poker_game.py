@@ -46,9 +46,16 @@ def flush(hand):
     return len(set(suits)) == 1
 
 
-def kind(number, hand):
+def kind(n, ranks):
+    """ Return the first rank that this hand has exactly n
+        and return None otherwise"""
+    for r in ranks:
+        if ranks.count(r) == n:
+            return r
     return None
 
 
 def two_pair(ranks):
+    """If there are two pair, return the two ranks as a
+       tuple: (highest, lowest); otherwise return None."""
     return None

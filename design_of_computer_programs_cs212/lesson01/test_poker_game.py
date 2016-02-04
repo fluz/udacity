@@ -55,3 +55,19 @@ class TddPokerGame(unittest.TestCase):
 
         self.assertEqual(poker_game.straight([9, 8, 7, 6, 5]), True)
         self.assertEqual(poker_game.straight([9, 8, 7, 4, 5]), False)
+
+    def test_kind(self):
+        """ Test the kind """
+        fk = "9D 9H 9S 9C 7D".split()
+
+        fkranks = poker_game.card_ranks(fk)
+
+        self.assertEqual(poker_game.kind(4, fkranks), 9)
+        self.assertEqual(poker_game.kind(3, fkranks), None)
+        self.assertEqual(poker_game.kind(2, fkranks), None)
+        self.assertEqual(poker_game.kind(1, fkranks), 7)
+
+    def test_two_pair(self):
+        """ Test two pairs"""
+        tp = "TD 9H TH 7C 3S".split()
+        tpranks = card_ranks(tp)
