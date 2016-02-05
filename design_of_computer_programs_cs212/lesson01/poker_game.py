@@ -2,7 +2,7 @@
 
 def poker(hands):
     """Return a list of winning hands: poker([hand,...]) => [hand,...]"""
-    return max(hands, key=hand_rank)
+    return allmax(hands, key=hand_rank)
 
 
 def allmax(iterable, key=None):
@@ -10,11 +10,10 @@ def allmax(iterable, key=None):
     result, maxval = [], None
     key = key or (lambda x: x)
     for i in iterable:
-        if maxval < key(i):
-            maxval = key(i)
-            result = []
-            result.append(i)
-        if maxval == key(i):
+        if len(result) == 0 or maxval < key(i):
+            result, maxval = [i], key(i)
+            print result
+        elif maxval == key(i):
             result.append(i)
     return result
 

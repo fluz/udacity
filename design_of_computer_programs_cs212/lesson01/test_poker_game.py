@@ -15,12 +15,12 @@ class TddPokerGame(unittest.TestCase):
         fk = "9D 9H 9S 9C 7D".split()
         fh = "TD TC TH 7C 7D".split()
 
-        self.assertEqual(poker_game.poker([fk, sf, fh]), sf)
-        self.assertEqual(poker_game.poker([fk, fh]), fk)
+        self.assertEqual(poker_game.poker([fk, sf, fh]), [sf])
+        self.assertEqual(poker_game.poker([fk, fh]), [fk])
         self.assertEqual(poker_game.poker([sf, fk, sf2]), [sf, sf2])
-        self.assertEqual(poker_game.poker([fk, fk]), fk)
-        self.assertEqual(poker_game.poker([fk]), fk)
-        self.assertEqual(poker_game.poker([fk] * 99 + [sf]), sf)
+        self.assertEqual(poker_game.poker([fk, fk]), [fk, fk])
+        self.assertEqual(poker_game.poker([fk]), [fk])
+        self.assertEqual(poker_game.poker([fk] * 99 + [sf]), [sf])
 
     def test_hand_rank(self):
         """ Test the output of a hand_rank"""
