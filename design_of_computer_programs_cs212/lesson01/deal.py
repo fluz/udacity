@@ -20,6 +20,12 @@ def deal(num_hands, n=5, deck=MY_DECK):
     return diff_hands
 
 
+def deal_2(num_hands, n=5, deck=MY_DECK):
+    "Shuffle the deck and deal out numhands n-cards hands"
+    random.shuffle(deck)
+    return [deck[n*i:n*(i+1)] for i in xrange(num_hands)]
+
 
 if __name__ == "__main__":
     print deal(2)
+    print deal_2(2)
