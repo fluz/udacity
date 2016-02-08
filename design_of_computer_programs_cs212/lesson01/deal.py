@@ -1,9 +1,7 @@
 """
 Check the distribution of cards in a hand (in a poker game)
 """
-from __future__ import division
 import random
-import poker_game
 
 
 MY_DECK = [r+s for r in '23456789TJQKA' for s in 'SHDC']
