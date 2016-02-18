@@ -4,6 +4,7 @@ Implementing the study of lesson 1 - Poker game
 Create a function to check the winning hands in a poker game.
 """
 
+
 def poker(hands):
     """Return a list of winning hands: poker([hand,...]) => [hand,...]"""
     return allmax(hands, key=hand_rank)
@@ -47,7 +48,7 @@ def hand_rank(hand):
 
 def card_ranks(cards):
     """ Return a list of the ranks, sorted with higher first"""
-    ranks = ["--23456789TJQKA".index(r) for r,s in cards]
+    ranks = ["--23456789TJQKA".index(r) for r, s in cards]
     ranks.sort(reverse=True)
     return [5, 4, 3, 2, 1] if ranks == [14, 5, 4, 3, 2] else ranks
 
