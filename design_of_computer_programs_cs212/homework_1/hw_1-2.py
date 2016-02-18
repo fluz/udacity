@@ -22,11 +22,31 @@
 
 import itertools
 
+allranks = '23456789TJQKA'
+redcards = [r + s for r in allranks for s in 'DH']
+blackcards = [r + s for r in allranks for s in 'SC']
+
 
 def best_wild_hand(hand):
     "Try all values for jokers in all 5-card selections."
+    hands = set(best_seven_cards(h)
+                for h in itertools.product(*map(replacements, hand)))
+    return max(hands, key=hand_rank)
 
-    # Your code here
+
+def best_seven_cards(hand):
+    return max(list(itertools.combinations(hand, 5)), key=hand_rank)
+
+
+def replacements(card):
+    """ Return a list of the possible replacements for a card
+    There will be more than 1 only for wild cards."""
+    if card == '?B':
+        return blackcards
+    elif card == '?R':
+        return redcards
+    else:
+        return [card]
 
 
 def test_best_wild_hand():
@@ -107,3 +127,7 @@ def two_pair(ranks):
         return (pair, lowpair)
     else:
         return None
+
+
+if __name__ == "__main__":
+    print test_best_wild_hand()
