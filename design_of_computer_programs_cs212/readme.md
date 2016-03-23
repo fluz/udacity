@@ -4,11 +4,27 @@ This course has the idea to improve the skills in the development of programs.
 
 The main language used in this course is Python.
 
-## Some tips learned in this course
+## Approach for desing programs
+
+### Design 
+1. Concept inventory;
+2. Refine ideas;
+3. Simplest implementation;
+4. Back envelope: to make an approach of how many time will spend to run the
+code with the simplest implementation;
+5. Refine the code: to improve the running speed.
+
+### Building tools
+1. For timing;
+2. counts;
+3. aspects.
+
+
+## Python tips learned in this course
 
 ### List Comprehension
 
-The main ideia behind the use of list comprehension is the possibility
+The main idea behind the use of list comprehension is the possibility
 to help the writing for clauses and insert the same in a list structure.
 
 ```python
@@ -32,7 +48,7 @@ for r,s in cards:
 
 ### Generator Expressions
 
-The generator expression have the similar ideia from list
+The generator expression have the similar idea from list
 comprehension. They have two differences.
 
 First of all the generator expressions uses paretheses instead of
@@ -63,7 +79,7 @@ next(g)
   File "<stdin>", line 1, in <module>
 StopIteration
 
-# This happen because the ideia is use with for loop.
+# This happen because the idea is use with for loop.
 
 # defining the generator
 h = (sq(x) for x in xrange(10) if x%2 == 0)
