@@ -91,6 +91,40 @@ sq called 8
 [0, 4, 16, 36, 64]
 ```
 
+### Generator Functions
+
+It's very similar to generator expression, but it is possible to
+define where in the calculation will stop and wait the next step.
+
+Let's show an example to show how this works.
+
+```python
+# ------------
+# User Instructions
+#
+# Define a function, all_ints(), that generates the
+# integers in the order 0, +1, -1, +2, -2, ...
+
+def ints(start, end = None):
+    i = start
+    while i <= end or end is None:
+          yield i
+          i = i + 1
+
+
+def all_ints():
+    "Generate integers in the order 0, +1, -1, +2, -2, +3, -3, ..."
+     yield 0
+     for i in ints(1):
+     	 yield +i
+         yield -i
+
+L = all_ints()
+
+print [next(L) for _ in xrange(10)]
+[0, 1, -1, 2, -2, 3, -3, 4, -4, 5]
+```
+
 ### Star args notation
 
 It's enable the possibility to use a function of a function.
