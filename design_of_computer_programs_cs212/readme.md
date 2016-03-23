@@ -90,3 +90,19 @@ sq called 6
 sq called 8
 [0, 4, 16, 36, 64]
 ```
+
+### Star args notation
+
+It's enable the possibility to use a function of a function.
+
+Let's present an example
+```python
+import time
+
+def timedcall(fn, *args)
+    "Call function with args; return the time in seconds and result"
+    t0 = time.clock
+    result = fn(*args)
+    t1 = time.clock()
+    return t1-t0, result
+```
