@@ -9,8 +9,8 @@
 # Note that you will not be able to run your code yet since the
 # program is incomplete. Please SUBMIT to see if you are correct.
 
-import string
 from __future__ import division
+import string
 from itertools import permutations
 import re
 
@@ -25,7 +25,7 @@ def solve(formula):
 
 def fill_in(formula):
     "Generate all possible fillings-in of letters in formula with digits."
-    letters = ''.join(set(formula) & set(string.letters))  # should be a string
+    letters = ''.join(set(formula) & set(string.uppercase))  # should be a string
     for digits in permutations(string.digits, len(letters)):
         table = string.maketrans(letters, ''.join(digits))
         yield formula.translate(table)
