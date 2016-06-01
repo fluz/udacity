@@ -56,7 +56,11 @@ Para isso será usado o VirtualBox para permitir esse ambiente e o Vagrant para 
     * n para achar a próxima ocorrência da palavra
     * N para achar a ocorrência anterior da palavra
 23. nano
-24. 
+24. pwd
+25. mv
+26. creat
+27. touch
+28. 
 
 
 
@@ -69,3 +73,13 @@ Para isso será usado o VirtualBox para permitir esse ambiente e o Vagrant para 
 4. ctrol+D
 5. Line based program
 6. Waiting for input
+7. ..
+8. .
+9. ~
+
+## Árvore de arquivos
+
+## Caminho absoluto e caminho relativo
+
+
+## Globbing
