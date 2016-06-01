@@ -22,6 +22,5 @@ Para isso será usado o VirtualBox para permitir esse ambiente e o Vagrant para 
 
 6. Execute a sua máquina virtual.
 
-
 ## Lista de comandos
 
