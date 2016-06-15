@@ -12,7 +12,7 @@ Before we access our machine, let’s quickly review a few commands that vagrant
 This command will show you the current status of the virtual machine. It should currently read “default running (virtualbox)” along with some other information.
 
 * Type `vagrant suspend`
-This command suspends your virtual machine. All of your work is saved and the machine is put into a “sleep mode” of sorts. The machines state is saved and it’s very quick to stop and start your work. You should use this command if you plan to just take a short break from your work but don’t want to leave the virtual machine running.
+This command suspends your virtual machine. All of your work is saved and the machine is put into a “sleep mode” of sorts. The machines state is saved and  it’s very quick to stop and start your work. You should use this command if you plan to just take a short break from your work but don’t want to leave the virtual machine running.
 
 * Type `vagrant up`
 This gets your virtual machine up and running again. Notice we didn’t have to redownload the virtual machine image, since it’s already been downloaded.
@@ -27,3 +27,19 @@ This command halts your virtual machine. All of your work is saved and the machi
 
 * Type `vagrant destroy`
 This command destroys your virtual machine. Your work is not saved, the machine is turned off and forgotten about for the most part. Think of this as formatting the hard drive of a computer. You can always use vagrant up to relaunch the machine but you’ll be left with the baseline Linux installation from the beginning of this course. You should not have to use this command at any time during this course unless, at some point in time, you perform a task on the virtual machine that makes it completely inoperable.
+
+## Directories
+
+### `home`
+
+### `etc` It is where the configuration files lives.
+
+### `var` It is where the variables file are stored. Some files in this directory changes your size to store data. Usually here the files stored are logs.  
+
+### `bin` It a dir to store executable binary files, used in the system.
+
+### `sbin` It is very similar to `bin` directory, but these binaries are used only by users with root privilegies.
+
+### `usr` user programs. 
+
+### `lib` It is used to store the libraries used by the system.
